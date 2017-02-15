@@ -23,6 +23,7 @@ public class Robot extends IterativeRobot {
 	
 	
 	public static final DriveSubsystem driveSubsystem=new DriveSubsystem();
+	public static final ClimbSubsystem
 	public static OI oi;
 
 	

@@ -12,7 +12,9 @@ public class RobotMap {
 	public static int BACKLEFTTALON_ID = 12;
 	public static int BACKRIGHTTALON_ID = 22;
 	public static int JOYSTICK_ID = 0;
-
+	public static int LEFTCLIMBTALON_ID = 32;
+	public static int RIGHTCLIMBTALON_ID = 31;
+	public static int TRIGGER_ID = 91;
 	
 	
 	// For example to map the left and right motors, you could define the

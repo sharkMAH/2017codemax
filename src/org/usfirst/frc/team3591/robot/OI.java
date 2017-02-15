@@ -1,6 +1,8 @@
 package org.usfirst.frc.team3591.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
+import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.Trigger;
 
 
 /**
@@ -10,11 +12,17 @@ import edu.wpi.first.wpilibj.Joystick;
 public class OI {
 	
 	public Joystick JoyStick = new Joystick(RobotMap.JOYSTICK_ID);
+	public Trigger trigger = new Trigger();
+	
+public void whileActive(){
+	
+}
+	
 	public enum Axis {
 		X,Y,Z, THROTTLE;
-}
-	public double getAxis(int stick, Axis axis){
-		switch (axis){
+	}
+		public double getAxis(int stick, Axis axis){
+			switch (axis){
 		case X:
 			double X = (JoyStick.getX());
 			   if (X < 0.1 && X > 0){
