@@ -2,6 +2,7 @@ package org.usfirst.frc.team3591.robot;
 
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.buttons.Button;
+import edu.wpi.first.wpilibj.buttons.JoystickButton;
 import edu.wpi.first.wpilibj.buttons.Trigger;
 
 
@@ -12,13 +13,15 @@ import edu.wpi.first.wpilibj.buttons.Trigger;
 public class OI {
 	
 	public Joystick JoyStick = new Joystick(RobotMap.JOYSTICK_ID);
-	public Trigger trigger = new Trigger();
+	public JoystickButton trigger = new JoystickButton(JoyStick, RobotMap.TRIGGER_ID);
 	
 public void whileActive(){
-	
+	return;
 }
+
 	
-	public enum Axis {
+
+public enum Axis {
 		X,Y,Z, THROTTLE;
 	}
 		public double getAxis(int stick, Axis axis){

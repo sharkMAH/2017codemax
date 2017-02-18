@@ -7,8 +7,9 @@ import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
 
+import org.usfirst.frc.team3591.robot.commands.ClimbCommand;
 import org.usfirst.frc.team3591.robot.commands.DriveCommand;
-
+import org.usfirst.frc.team3591.robot.subsystems.ClimbSubsystem;
 import org.usfirst.frc.team3591.robot.subsystems.DriveSubsystem;
 /**
  * The VM is configured to automatically run this class, and to call the
@@ -20,10 +21,10 @@ import org.usfirst.frc.team3591.robot.subsystems.DriveSubsystem;
 public class Robot extends IterativeRobot {
 	
 	Command driveCommand;
-	
+	Command climbCommand;
 	
 	public static final DriveSubsystem driveSubsystem=new DriveSubsystem();
-	public static final ClimbSubsystem
+	public static final ClimbSubsystem climbSubsystem=new ClimbSubsystem();
 	public static OI oi;
 
 	
@@ -42,7 +43,8 @@ public class Robot extends IterativeRobot {
 	public void robotInit() {
 		oi = new OI();
 		 driveCommand = new DriveCommand();
-		// chooser.addObject("My Auto", new MyAutoCommand());
+		climbCommand = new ClimbCommand();
+		 // chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
 
@@ -104,7 +106,9 @@ public class Robot extends IterativeRobot {
 		// this line or comment it out.
 		
         driveCommand.start();
+        climbCommand.start();
 	}
+	
 
 	/**
 	 * This function is called periodically during operator control
