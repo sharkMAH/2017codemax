@@ -21,8 +21,8 @@ public class ClimbCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.climbSubsystem.ClimbTalon();
-   Robot.climbSubsystem.ClimbTalonDown();
+    	Robot.climbSubsystem.trigger();
+   Robot.climbSubsystem.button();
     }
 
     // Make this return true when this Command no longer needs to run execute()
