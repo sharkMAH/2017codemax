@@ -23,8 +23,8 @@ public ClimbSubsystem(){
 }
 
 	public void ClimbTalon(){
-		lcTalon.set(.5);
-		rcTalon.set(-.5);
+		lcTalon.set(1);
+		rcTalon.set(-1);
 	}
 
 
