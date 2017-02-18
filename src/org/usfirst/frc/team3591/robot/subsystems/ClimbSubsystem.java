@@ -27,7 +27,10 @@ public ClimbSubsystem(){
 		rcTalon.set(-1);
 	}
 
-
+	public void ClimbTalonDown(){
+		lcTalon.set(-1);
+		rcTalon.set(1);
+	}
     public void initDefaultCommand() {
         // Set the default command for a subsystem here.
         //setDefaultCommand(new MySpecialCommand());

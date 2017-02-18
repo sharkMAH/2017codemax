@@ -15,7 +15,7 @@ public class RobotMap {
 	public static int LEFTCLIMBTALON_ID = 32;
 	public static int RIGHTCLIMBTALON_ID = 31;
 	public static int TRIGGER_ID = 1;
-	
+	public static int BUTTON_ID = 2;
 	
 	// For example to map the left and right motors, you could define the
 	// following variables to use with your drivetrain subsystem.

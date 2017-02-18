@@ -14,11 +14,14 @@ public class OI {
 	
 	public Joystick JoyStick = new Joystick(RobotMap.JOYSTICK_ID);
 	public JoystickButton trigger = new JoystickButton(JoyStick, RobotMap.TRIGGER_ID);
+	public JoystickButton button = new JoystickButton(JoyStick, RobotMap.BUTTON_ID);
 	
-public JoystickButton whileActive(){
-	return trigger;
+	public JoystickButton whileActive(){
+		return trigger;
 }
-
+	public JoystickButton whileHeld(){
+		return button;
+	}
 	
 
 public enum Axis {
