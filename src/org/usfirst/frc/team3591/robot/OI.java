@@ -15,8 +15,8 @@ public class OI {
 	public Joystick JoyStick = new Joystick(RobotMap.JOYSTICK_ID);
 	public JoystickButton trigger = new JoystickButton(JoyStick, RobotMap.TRIGGER_ID);
 	
-public void whileActive(){
-	return;
+public JoystickButton whileActive(){
+	return trigger;
 }
 
 	
