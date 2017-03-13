@@ -27,46 +27,55 @@ public class OI {
 public enum Axis {
 		X,Y,Z, THROTTLE;
 	}
+	
 		public double getAxis(int stick, Axis axis){
 			switch (axis){
 		case X:
 			double X = (JoyStick.getX());
-			   if (X < 0.1 && X > 0){
+			/*
+			   if (X < 0.5 && X > 0.2){
 				   return 0;
 				   }
-			   else if (X > -0.1 && X < 0){
+			   else if (X > -0.5 && X < 0.2){
 				   return 0;
 			   } else {
+			   */
 				   return X;
-			   }
+			   //}
 			
 		case Y:
-			double Y = (JoyStick.getX());
-			   if (Y < 0.1 && Y > 0){
+			double Y = (JoyStick.getY());
+			  /* if (Y < 0.5 && Y > 0.2){
 				   return 0;
 				   }
-			   else if (Y > -0.1 && Y < 0){
+			   else if (Y > -0.5 && Y < 0.2){
 				   return 0;
-			   } else {
+			   } else {*/
 				   return Y;
-			   }
+			   //}
 			
 		case Z:
-			double Z = (JoyStick.getX());
-			   if (Z < 0.1 && Z > 0){
+			double Z = (JoyStick.getZ());
+			   /*
+			    * if (Z < 0.5 && Z > 0.2){
+			    
 				   return 0;
 				   }
-			   else if (Z > -0.1 && Z < 0){
+			   else if (Z > -0.5 && Z < 0.2){
 				   return 0;
 			   } else {
+			   */
 				   return Z;
-			   }
+			   //}
+		case THROTTLE:
+			//return (1 - JoyStick.getThrottle()) / 2;
+			return(JoyStick.getThrottle());
 		default:
-			break;
+			System.out.println("Invalid Axis");
+			return 0.0;
 		
 
 }
-		return 0;
 }
 
 }

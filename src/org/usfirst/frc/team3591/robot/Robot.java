@@ -6,6 +6,7 @@ import edu.wpi.first.wpilibj.command.Scheduler;
 import edu.wpi.first.wpilibj.livewindow.LiveWindow;
 import edu.wpi.first.wpilibj.smartdashboard.SendableChooser;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
+import edu.wpi.first.wpilibj.CameraServer;
 
 import org.usfirst.frc.team3591.robot.commands.ClimbCommand;
 import org.usfirst.frc.team3591.robot.commands.DriveCommand;
@@ -41,9 +42,9 @@ public class Robot extends IterativeRobot {
 	
 	@Override
 	public void robotInit() {
+		CameraServer.getInstance().startAutomaticCapture(0);
 		oi = new OI();
-		 driveCommand = new DriveCommand();
-		climbCommand = new ClimbCommand();
+		driveCommand = new DriveCommand();
 		 // chooser.addObject("My Auto", new MyAutoCommand());
 		SmartDashboard.putData("Auto mode", chooser);
 	}
@@ -106,7 +107,6 @@ public class Robot extends IterativeRobot {
 		// this line or comment it out.
 		
         driveCommand.start();
-        climbCommand.start();
 	}
 	
 

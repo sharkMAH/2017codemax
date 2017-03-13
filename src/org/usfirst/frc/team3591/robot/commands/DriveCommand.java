@@ -18,8 +18,9 @@ public class DriveCommand extends Command {
 
     // Called repeatedly when this Command is scheduled to run
     protected void execute() {
-    	Robot.driveSubsystem.mecanumDrive(Robot.oi.getAxis(1, Axis.Y),
-    			Robot.oi.getAxis(1, Axis.X), Robot.oi.getAxis(1, Axis.Z));
+    	Robot.driveSubsystem.mecanumDrive(Robot.oi.getAxis(0, Axis.X),
+    			Robot.oi.getAxis(0, Axis.Y),
+    			Robot.oi.getAxis(0, Axis.Z));
     }
 
     // Make this return true when this Command no longer needs to run execute()
